@@ -1,0 +1,9 @@
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const OPEN_POST_FORM = "OPEN_POST_FORM";
+
+export const GET_PRODUCTS = 'GET_PRODUCTS';
+export const SHOW_MODAL_SUCCESS = 'SHOW_MODAL_SUCCESS';
+export const UPDATE_CART_ITEM = 'UPDATE_CART_ITEM';
+export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';
+export const TOTAL_CART = 'TOTAL_CART';
+

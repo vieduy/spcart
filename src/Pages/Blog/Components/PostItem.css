@@ -1,0 +1,7 @@
+.descriptionText {
+  max-height: 110px;
+  overflow: hidden;
+  text-overflow: clip;
+  margin-bottom:10px;
+}
+
