@@ -55,11 +55,14 @@ export const actFetchProductsRequest = () => {
   }
 
   export const actPostOrderRequest = payload => {
+    console.log(payload);
     return dispatch => {
       return api.post('checkout', payload)
       .then( res => {
-        dispatch(showModalSuccess('Đặt hàng thành công'));
-        localStorage.removeItem("products");
+        if (res.status === 200){
+          dispatch(showModalSuccess('Đặt hàng thành công'));
+          localStorage.removeItem("products");
+        }
       })
       .catch( err => {
         dispatch(showModalSuccess('Đặt hàng thất bại'));

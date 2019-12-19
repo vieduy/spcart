@@ -4,8 +4,7 @@ class BillingDetail extends Component {
   constructor(props){
     super(props);
     this.state = {
-      firstname: '',
-      lastname: '',
+      name: '',
       university: 'HCMUT',
       address: '',
       phone: '',
@@ -30,22 +29,16 @@ class BillingDetail extends Component {
   }
 
   render() {
-    const { firstname, lastname, university, address, phone, email, note } = this.props;
+    const { name, university, address, phone, email, note } = this.props;
     return (
       <div className="col-xl-7 ftco-animate">
         <form onSubmit={this.handleSubmit} className="billing-form">
           <h3 className="mb-4 billing-heading">Billing Details</h3>
           <div className="row align-items-end">
-            <div className="col-md-6">
+            <div className="col-md-12">
               <div className="form-group">
-                <label htmlFor="firstname">First Name(*)</label>
-                <input name="lastname" value={lastname} onChange={this.handleInputChange} type="text" className="form-control" placeholder />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="form-group">
-                <label htmlFor="lastname">Last Name(*)</label>
-                <input name="firstname" value={firstname} onChange={this.handleInputChange} type="text" className="form-control" placeholder />
+                <label htmlFor="name">Name(*)</label>
+                <input name="name" value={name} onChange={this.handleInputChange} type="text" className="form-control" placeholder />
               </div>
             </div>
             <div className="w-100" />
@@ -66,16 +59,10 @@ class BillingDetail extends Component {
               </div>
             </div>
             <div className="w-100" />
-            <div className="col-md-6">
+            <div className="col-md-12">
               <div className="form-group">
-                <label htmlFor="streetaddress">Street Address(*)</label>
+                <label htmlFor="streetaddress">Address(*)</label>
                 <input name="address" value={address} onChange={this.handleInputChange} type="text" className="form-control" placeholder="House number and street name" />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="form-group">
-                <label htmlFor="towncity">Town / City(*)</label>
-                <input type="text" className="form-control" placeholder />
               </div>
             </div>
             <div className="w-100" />

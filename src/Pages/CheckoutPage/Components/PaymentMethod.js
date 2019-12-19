@@ -5,8 +5,7 @@ import * as actions from './../../../Actions/Actions';
 class PaymentMethod extends Component {
 
   handleSubmit = () => {
-    console.log(this.props.payload);
-    this.props.onPlaceOrder(this.props.data);
+    this.props.onPlaceOrder(this.props.payload);
   }
 
   render() {
