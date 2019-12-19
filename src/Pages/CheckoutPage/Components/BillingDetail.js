@@ -58,7 +58,7 @@ class BillingDetail extends Component {
                 </div>
               </div>
             </div>
-            <div className="w-100" />
+            <div className="w-100" /> 
             <div className="col-md-12">
               <div className="form-group">
                 <label htmlFor="streetaddress">Address(*)</label>

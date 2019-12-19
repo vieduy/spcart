@@ -3,16 +3,17 @@ import ProductsPage from './Pages/ProductsPage/ProductsPage';
 import CartPage from './Pages/CartPage/CartPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
+import FeedbackPage from './Pages/FeedbackPage/FeedbackPage';
 
 class Routes extends Component {
 
   render() {
     const routes = [
-      // {
-      //   path: '/home',
-      //   exact: true,
-      //   main: () => <Homepage />
-      // },
+      {
+        path: '/feedback',
+        exact: true,
+        main: () => <FeedbackPage />
+      },
 
       {
         path: '/products',

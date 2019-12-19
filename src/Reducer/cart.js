@@ -9,7 +9,6 @@ var initialState = data ? data : [];
 const myReducer = (state = initialState, action) => {
     switch(action.type){
         case types.ADD_TO_CART:
-            console.log(state);
             var a = findIndex(state, product => {
                 return product.product._id === action.product._id;
             })

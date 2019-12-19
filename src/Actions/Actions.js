@@ -2,7 +2,6 @@ import * as Types from '../Constants/ActionTypes'
 import api from "../service/api";
 
 export const addToCart = product => {
-  console.log(product);
     return {
         type: Types.ADD_TO_CART,
         product
@@ -55,7 +54,6 @@ export const actFetchProductsRequest = () => {
   }
 
   export const actPostOrderRequest = payload => {
-    console.log(payload);
     return dispatch => {
       return api.post('checkout', payload)
       .then( res => {
@@ -66,6 +64,22 @@ export const actFetchProductsRequest = () => {
       })
       .catch( err => {
         dispatch(showModalSuccess('Đặt hàng thất bại'));
+      })
+    }
+  }
+
+  export const onFeedbackRequest = payload => {
+    return dispatch => {
+      return api.post('feedback', payload)
+      .then( res => {
+        console.log(res);
+        if (res.status === 200){
+          dispatch(showModalSuccess('Cảm ơn bạn đã đóng góp ý kiến'));
+        }
+      })
+      .catch( err => {
+        console.log(err);
+        dispatch(showModalSuccess('Đóng góp thất bại'));
       })
     }
   }
